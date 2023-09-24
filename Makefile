@@ -7,4 +7,8 @@ new/feature_branch:
 new/commit:
 	R=$$RANDOM && cat /dev/urandom | head -c 100 > new_file_$$R.txt && \
 	  git add . && \
-	  git commit -m new_commit_$$R
+	  git commit -m new_commit_$$R && git push
+
+git/auto_setup_remote:
+	git config --global --add --bool push.autoSetupRemote true
+
